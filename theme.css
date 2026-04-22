@@ -1,0 +1,640 @@
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Heading {
+    color: white;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(12, 66, 12);
+    position: relative;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+}
+
+#navbar {
+    background-color: rgb(12, 66, 12);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    background-color: white;
+    color: rgb(12, 66, 12);
+}
+
+/* ========================================
+   MAIN CONTENT & ARTICLES
+   ======================================== */
+.mainPic{
+    width: 50%;
+     border-radius: 10px;
+    border: 2px solid rgb(156, 126, 38);
+    flex-shrink: 0;
+}
+   #article {
+    background-color: rgb(51, 74, 54);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.separation {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+}
+.infoText{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ========================================
+   NEW READER LINK
+   ======================================== */
+#newReaderLink {
+    background-color: rgb(120, 96, 24);
+    padding: 10px 20px;
+}
+
+#newReaderLink a {
+    display: inline-block;
+    color: rgb(120, 96, 24);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#newReaderLink a:hover {
+    background-color: white;
+    color: rgb(120, 96, 24);
+}
+
+/* ========================================
+   CARDS & GRID LAYOUT
+   ======================================== */
+#grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    width: 85%;
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ========================================
+   OVERLAY STYLES
+   ======================================== */
+#overlaytog,
+#overlayacotar,
+#overlaycc {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    padding: 75px 100px;
+    font-size: 3rem;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+#overlaytog {
+    background: rgb(37, 92, 37);
+}
+
+#overlayacotar {
+    background: rgb(2, 4, 49);
+}
+
+#overlaycc {
+    background: rgb(100, 6, 6);
+}
+
+#overlaytog a,
+#overlayacotar a,
+#overlaycc a {
+    text-decoration: none;
+    font-family: "Tangerine", cursive;
+}
+
+/* Overlay Hover Effects */
+.card:hover #overlaytog,
+.card:hover #overlayacotar,
+.card:hover #overlaycc {
+    transform: translateX(0);
+}
+
+
+
+/* ========================================
+   TOG SECTION
+   ======================================== */
+.boxtog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    font-size: large;
+    background-color: #417445;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+
+}
+
+.pic {
+
+    border-radius: 10px;
+    border: 2px solid rgb(156, 126, 38);
+    flex-shrink: 0;
+    width: 178px;
+    height: 250px;
+}
+
+.togH {
+    color: rgb(137, 180, 137);
+    background-color: rgb(49, 49, 50);
+    padding: 10px 50px;
+    margin: 0;
+}
+
+.togquote {
+    color: rgb(255, 255, 255);
+    font-family: "Tangerine", cursive;
+    font-size: 4.5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-image: url(images/ToGPicsmall.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#togTextOverview {
+    background-color: rgb(105, 97, 54);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.togCharacter {
+    color: rgb(156, 126, 38);
+    background: #1a1a22;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.togbooks {
+    color: white;
+}
+
+/* ========================================
+   TIMELINE  SECTION
+   ======================================== */
+.order {
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(49, 49, 50);
+}
+
+.timelineHorizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.timelineHorizontal::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    transform: translateY(-50%);
+}
+
+.timelineEvent,
+.TimelineEvent {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventDate {
+    font-weight: bold;
+
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: white;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventDottog {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(156, 126, 38);
+    border: 3px solid rgb(75, 72, 72);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.eventDotacotar {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(220, 220, 218);
+    border: 3px solid rgb(75, 72, 72);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.timelineItemtog {
+    margin-top: 10px;
+    background: #417445;
+    padding: 30px 15px 30px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(193, 164, 21, 0.1);
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    overflow: hidden;
+}
+
+.timelineItemacotar {
+    margin-top: 10px;
+    background: rgb(2, 4, 49);
+    ;
+    padding: 30px 15px 30px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(193, 164, 21, 0.1);
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    overflow: hidden;
+}
+
+/* ========================================
+   ACOTAR  SECTION
+   ======================================== */
+.acotarH {
+    color: rgb(109, 113, 174);
+    background-color: rgb(49, 49, 50);
+    padding: 10px 50px;
+    margin: 0;
+}
+
+#acotarTextOverview {
+    background-color: rgb(92, 92, 101);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.acotarquote {
+    color: rgb(255, 255, 255);
+    font-family: "Tangerine", cursive;
+    font-size: 4.5rem;
+    text-align: center;
+    background-image: url(images/acotarPicSmall.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.acotarCharacters {
+    color: rgb(92, 92, 101);
+    background: #1a1a22;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.boxacotar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    font-size: large;
+    background-color: rgb(2, 4, 49);
+    ;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+
+
+}
+
+
+.acotarBooks {
+    color: white;
+}
+
+/* ========================================
+   CC SECTION
+   ======================================== */
+.ccH {
+    color: rgb(176, 104, 104);
+    background-color: rgb(49, 49, 50);
+    padding: 10px 50px;
+    margin: 0;
+}
+
+.ccquote {
+    color: rgb(255, 255, 255);
+    font-family: "Tangerine", cursive;
+    font-size: 4.5rem;
+    text-align: center;
+    background-image: url(images/CrescentCityPicsmall.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ccCharacter {
+    color: rgb(107, 58, 58);
+    background: #1a1a22;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: larger;
+
+}
+
+#ccTextOverview {
+    background-color: rgb(107, 58, 58);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.timelineItemcc {
+    margin-top: 10px;
+    background: rgb(100, 6, 6);
+    padding: 30px 15px 30px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(193, 164, 21, 0.1);
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    overflow: hidden;
+}
+
+.eventDotcc {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(107, 58, 58);
+    border: 3px solid rgb(75, 72, 72);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.boxcc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    font-size: large;
+    background-color: rgb(100, 6, 6);
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+
+}
+
+/* ========================================
+   AUTHOR SECTION
+   ======================================== */
+.authorH {
+    color: rgb(110, 187, 234);
+    background-color: rgb(49, 49, 50);
+    padding: 10px 50px;
+    border: 20px;
+    border-color: rgb(61, 61, 61);
+}
+
+.authorText {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.column {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.column img {
+    width: 250px;
+    height: 350px;
+    margin-right: 20px;
+}
+
+.authorList {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+
+}
+
+
+/* ========================================
+   NEW READER SECTION
+   ======================================== */
+.newReaderH {
+    color: rgb(178, 133, 211);
+    background-color: rgb(49, 49, 50);
+    padding: 10px 50px;
+    margin: 0;
+
+}
+
+.newReaderText {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 150px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+
+}
+
+
+#footer {
+    background-color: rgb(57, 64, 57);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#credit {
+    color: rgb(255, 255, 255);
+    font-size: small;
+    background-color: rgb(57, 64, 57);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#credit:hover {
+    color: rgb(57, 64, 57);
+    background-color: rgb(255, 255, 255);
+}
+
+.cpic {
+    border-radius: 10px;
+    border: 2px solid rgb(156, 126, 38);
+    flex-shrink: 0;
+    width: 107px;
+    height: 150px;
+}
